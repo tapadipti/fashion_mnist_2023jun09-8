@@ -10,3 +10,32 @@ stages:
     - path: output/data.pkl
       md5: 35353c71da0985eed8bb507bbc53bd91
       size: 54950285
+  train:
+    cmd: python src/train.py
+    deps:
+    - path: output/data.pkl
+      md5: 35353c71da0985eed8bb507bbc53bd91
+      size: 54950285
+    - path: src/train.py
+      md5: 4f1fec86d36645b90cb51781ec6cefd3
+      size: 2774
+    params:
+      params.yaml:
+        train.batch_size: 128
+        train.dropout: 0.4
+        train.hidden_units: 64
+        train.lr: 0.01
+        train.num_epochs: 3
+    outs:
+    - path: dvclive/metrics.json
+      md5: 73d3c9fc9dd2f2863ee3b0033045bcbd
+      size: 53
+    - path: dvclive/plots/metrics/accuracy.tsv
+      md5: 94cfe2ee37625e9fae70196b5d91874a
+      size: 77
+    - path: output/model.h5
+      md5: 02cd4b736a1349b90f3f206419784f00
+      size: 638720
+    - path: output/train_logs.csv
+      md5: 5e47ec0aad2fd5acae69568f117178ec
+      size: 140

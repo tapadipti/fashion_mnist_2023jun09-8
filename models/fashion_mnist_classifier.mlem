@@ -1,0 +1,34 @@
+artifacts:
+  data:
+    hash: 02cd4b736a1349b90f3f206419784f00
+    size: 638720
+    uri: fashion_mnist_classifier
+model_type:
+  io:
+    save_format: h5
+    type: tf_keras
+  methods:
+    predict:
+      args:
+      - name: data
+        type_:
+          type: unspecified
+      name: predict
+      returns:
+        type: unspecified
+    tensorflow_predict:
+      args: []
+      name: __call__
+      returns:
+        type: unspecified
+      varargs: args
+      varkw: kwargs
+  type: tf_keras
+object_type: model
+requirements:
+- module: tensorflow
+  version: 2.9.1
+- module: numpy
+  version: 1.22.3
+- module: keras
+  version: 2.9.0
