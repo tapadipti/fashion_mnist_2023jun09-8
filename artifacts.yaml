@@ -1,0 +1,9 @@
+fashion-mnist-classifier:
+  description: CNN to classify fashion_mnist images.
+  labels:
+  - image-classification
+  - cnn
+  - tensorflow
+  - keras
+  path: models/fashion_mnist_classifier
+  type: model
