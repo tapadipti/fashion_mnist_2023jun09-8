@@ -12,8 +12,8 @@ stages:
         train.dropout: 0.45
         train.hidden_units: 64
         train.lr: 0.001
-        train.num_epochs: 4
+        train.num_epochs: 3
     outs:
     - path: dvclive/metrics.json
-      md5: 983e207fec7870165c61870b2ac3ae71
+      md5: a2bc5b6c2f758a3e3ed5828c3e64beea
       size: 42
